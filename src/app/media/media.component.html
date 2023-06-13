@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="pl">
+    <div class="logo">
+        <img src={{path}} alt="" >
+    </div >
+    <div >
+    <mat-toolbar class="tool">
+        <button mat-raised-button color="primary" (click)="after()">
+            <mat-icon>skip_next</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" (click)="p()">
+            <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" (click)="pause()">
+            <mat-icon>pause</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" (click)="befor()">
+            <mat-icon>skip_previous</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>
+<div>
+    <h3>Music List</h3>
+    <li *ngFor="let item of musiclist" class="border-box">
+<a   routerLinkActive="active-menu"    (click)="play(item.id)" >{{item.title}}  </a>
+ 
+   
+</li>
+</div>
+</div>
+</div>
